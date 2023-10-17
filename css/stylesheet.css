@@ -1,0 +1,523 @@
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Space+Mono&display=swap');
+
+  body{
+    background-color: #1C203B;
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
+}
+
+main{
+    padding: 20px;/**/
+}
+
+.main-index{
+    padding: 0;
+}
+/********************************************
+
+                    header
+
+*********************************************/
+header{
+    background-color: #2E3560;
+    height: 80px;
+}
+header > a >img{
+    height: 60px;
+    margin-top: 6px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.fa-cart-shopping{
+    color: #BFCFFD;
+    font-size: 35px;
+    margin: 22.5px;
+    position: absolute;
+    right: 0;
+}
+
+.fa-cart-shopping:hover {
+    color: #9FB8FF;
+    /*margin-top: 21px;/**/
+}
+
+.checkbox-label {
+    height: 30px;
+    width: 35px;
+    margin: 25px 22.5px;
+    position: absolute;
+    z-index: 99;
+
+}
+
+.ham-div {
+    height: 30px;
+    width: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 25px 22.5px;
+    position: absolute;
+}
+
+.ham-div > div{
+    background-color: #BFCFFD;
+    width: 35px;
+    border-radius: 50px;
+    height: 5.8px;
+    position: relative;
+    transform:rotate(0deg);
+}
+
+#menu-checkbox:checked ~ .ham-div > .ham-div-1{
+    animation-name: ham1;
+    animation-duration: 500ms;
+    animation-timing-function: all ease;
+    transform-origin: left;
+    animation-fill-mode: forwards;
+    
+}
+
+#menu-checkbox:checked ~ .ham-div > .ham-div-3{
+    animation-name: ham3;
+    animation-duration: 500ms ;
+    transform-origin:  left;
+    animation-fill-mode: forwards;
+}
+
+#menu-checkbox:checked ~ .ham-div > .ham-div-2{
+    animation-name: ham2;
+    animation-duration: 500ms;
+    transform-origin:  center;
+    animation-fill-mode: forwards;
+    /*background-color: black;/**/
+    
+
+}
+@keyframes ham1{
+    from {
+        transform: rotate(0);
+        top: 0;
+    }
+    
+    to{
+        transform: rotate(45deg);
+        top: -1px;
+    }
+    }/**/
+    
+
+@keyframes ham2{
+0% {
+    transform: rotate(0);
+    right:0;
+    opacity: 100%;
+}
+
+50%{
+    opacity: 100%;
+    right: 3.4px;
+}
+
+100%{
+    transform: rotate(45deg);
+    right: 6.8px;
+    opacity: 0;
+  
+}
+}/**/
+
+@keyframes ham3{
+    from {
+        transform: rotate(0);
+    }
+    
+    to{
+        transform: rotate(-45deg);
+    }
+    }/**/
+
+
+
+
+
+
+/*Dette er for hamburger menyen*/
+.drop-down-menu > a{
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    background-color: #2E3560;
+    padding: 20px;
+    border-bottom: solid #1C203B 4px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+.drop-down-menu > a:hover{
+    /*text-decoration: underline;/**/
+    background-color: #1C203B;
+}
+
+.fa-chevron-right{
+    position: absolute;
+    right: 20px;
+}
+
+.home-link{
+    border-top: solid #1C203B 4px;
+}
+
+.drop-down-menu{
+    position: absolute;
+    background-color:#2E3560 ;
+    height: 100%;
+    width: 95%;
+    top: 80px;
+    z-index: 99;
+    left: -95%;
+    
+}
+
+#menu-checkbox{
+    display: none;
+}/**/
+
+#menu-checkbox ~ .drop-down-menu{
+    transition: all ease-in-out 500ms;
+
+}
+
+#menu-checkbox:checked ~ .drop-down-menu{
+    transition: all ease-in-out 500ms;
+    left:0;
+
+}
+
+.abonner-ham-menu > label{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+.abonner-ham-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 50px;
+    
+}
+
+.abonner-ham-menu > input{
+    background-color: #1C203B;
+    color: white;
+    height: 40px;
+    width: 350px;
+    border-radius: 50px;
+    border: none;
+    margin-top: 10px;
+    padding-left: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+.abonner-ham-menu > input::placeholder{
+    color: #BFCFFD;
+}
+
+.abonner-ham-menu > input:focus{
+    border: 0px;
+    outline: none;
+    color: white;
+}
+
+.abonner-ham-menu > .abonner-button{
+    background-color: #1C203B;
+    height: 42px;
+    width:90px;
+    border-radius: 50px;
+    border: solid 2px #BFCFFD;
+    color: #BFCFFD;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.abonner-ham-menu > .abonner-button:hover{
+    background-color: #BFCFFD;
+    color:#1C203B;
+}
+
+
+
+
+/********************************************
+
+                    main
+
+*********************************************/
+
+h1{
+    color: #BFCFFD;
+    font-family: 'Space Mono', monospace;
+    font-size: 40px;
+}
+
+h2{
+    color: #BFCFFD;
+    font-family: 'Space Mono', monospace;
+    font-size: 25px;
+}
+
+p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+.spill-container{
+    height: auto;
+    width: 350px;
+    background-color: #2E3560;
+    margin: 0px 20px 20px 20px;
+    border-radius: 30px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.spill-container > img{
+    width: 260px;
+    align-self: center;
+}
+.spill-container > p{
+    text-decoration: none;
+    color: white;
+    margin-top:40px;
+    margin-bottom: 0px;
+}
+
+.pris{
+font-weight: bold;
+}
+
+/*Dette er hovedsakelig for index.html*/
+
+.main-index{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-index > h2{
+  transform: translateX(-30%);
+  margin: 0 0 20px 0 ;
+}
+
+.hero{
+    background-color: #2E3560;
+    height: 280px;
+    width: 400px;
+    border-radius: 30px;
+    overflow: hidden;/**/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 20px;    
+}
+.hero > img{
+    height: 250px;
+    width:  190px;
+    transform: rotate(9deg);
+    align-self: center;
+}
+
+.hero > div {
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero > div > h2{
+    font-family: 'Space Mono', monospace;
+    color: white;
+    font-size: 21px;
+    margin-top: 25px;
+}
+
+
+.hero > div > p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: white;
+    margin-top: 25px
+
+}
+
+.hero > div > a{
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    text-decoration: none;
+    background-color: #BFCFFD;
+    padding:  10px 18px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 15px;
+    margin: 35px 0;
+}
+
+/*Dette er for spill*/
+
+.main-spill{
+    padding-bottom: 0px;
+}
+.spill-des{
+    color: white;
+}
+
+.main-spill > h1{
+    margin: 0px;
+}
+
+.main-spill > p{
+    margin: 20px 0 20px 0;
+}
+
+.main-spill > div{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/*Dette er for kontakt oss*/
+/*Dette er for om oss*/
+/*Dette er for handlekurv*/
+/*Dette er for checkout*/
+/*Dette er for*/
+
+/********************************************
+
+                    footer
+
+*********************************************/
+footer{
+    background-color: #2E3560;
+    height: 160px;
+}
+
+footer > nav{
+display: flex;
+flex-direction: column;
+height: 110px;
+/*background-color: black;/**/
+justify-content: center;
+margin:25px 0 0 20px;
+width: 100px;
+}
+
+footer > nav > a{
+    color: white;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    padding: 5px;
+}
+
+footer > nav > a:hover {
+    text-decoration: underline;
+}
+
+.abonner-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    bottom: 100px;
+    /*background-color: black;/**/
+    width: 320px;
+    left: 100%;
+    padding-right: 25px;
+    transform: translateX(-100%);
+}
+
+.abonner-footer > label{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+.abonner-footer > input{
+    background-color: #1C203B;
+    color: white;
+    height: 40px;
+    width: 300px;
+    border-radius: 50px;
+    border: none;
+    padding-left: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.abonner-footer > input::placeholder{
+    color: #BFCFFD;
+}
+
+.abonner-footer > input:focus{
+    border: 0;
+    outline: none;
+    color: white;
+}
+
+.abonner-footer > .abonner-button{
+    background-color: #1C203B;
+    height: 42px;
+    width:90px;
+    border-radius: 50px;
+    border: solid 2px #BFCFFD;
+    color: #BFCFFD;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    position: relative;
+    right: -111px;
+    bottom: 52px;
+}
+
+.abonner-footer > .abonner-button:hover{
+    background-color: #BFCFFD;
+    color:#1C203B;
+}
+
+footer > p {
+color: white;
+font-family: 'Roboto', sans-serif;
+font-size: 12px;
+opacity: 50%;
+position: relative;
+left:100%;
+padding-right: 20px;
+transform: translateX(-100%);
+bottom: 135px;
+
+width: 320px;
+text-align: center;
+}
+
+/********************************************
+
+                    mediaqiuries
+
+*********************************************/
+
