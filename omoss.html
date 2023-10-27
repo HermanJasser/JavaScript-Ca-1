@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nn">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="./css/stylesheet.css">
     <script src="https://kit.fontawesome.com/4c9767c9c5.js" crossorigin="anonymous"></script>
     <title> gamehub om oss</title>
 </head>
@@ -17,6 +17,7 @@
                 <div class="ham-div-line ham-div-2"></div>
                 <div class="ham-div-line ham-div-3"></div>
         </div>
+        <a href="index.html"><img src="./img/GameHub.png" alt="GameHub logo"></a>
         <nav class="drop-down-menu">
             <a class="home-link" href="./index.html">
                 Hjem<i class="fa-solid fa-chevron-right"></i>
@@ -31,23 +32,35 @@
                 Om oss<i class="fa-solid fa-chevron-right"></i>
             </a>
             <form class="abonner-ham-menu">
-                <label for="email">Få de nyeste oppdateringene innen gaming her</label>
-                <input type="email" maxlength="30" placeholder="Epost...">
+                <label for="email-header">Få de nyeste oppdateringene innen gaming her</label>
+                <input type="email" id="email-header" maxlength="30" placeholder="Epost..." required>
                 <input  class="abonner-button" type="submit" value="Abonner">
             </form>  
         </nav>
-        <a href="index.html"><img src="./img/GameHub.png" alt="GameHub logo"></a>
+        
         <a href="handlekurv.html"><i class="fa-solid fa-cart-shopping"></i></a>
     </header>
-    <main>
+    <main class="main-om-oss">
+        <img src="./img/pcmouse.jpg" alt="blå gaming mus bilde">
 
-
-
-
-
-
-
-
+        <h1>Velkommen til GameHub</h1>
+        <p>GameHub er lidenskapelig dedikert til å levere deg de beste og mest konkurransedyktige tilbudene på nedlastbare spill. 
+            Vi forstår at gaming er mer enn bare en hobby - det er en lidenskap, en verden av eventyr, utfordringer og muligheter til å skape uforglemmelige minner. 
+            Derfor har vi satt oss som mål å gi deg tilgang til en eksepsjonell spillopplevelse uten å tømme lommeboken. 
+        </p>
+        <p>Vår dedikasjon til gaming går dypt, og vi er selv en del av det pulserende gamingfellesskapet. 
+            Vi vet at alle spillere er unike, med ulike interesser og budsjett. Derfor tilbyr GameHub et variert utvalg av spill for alle typer gamere. Enten du er en eSports-entusiast, en casual gamer eller et stolt medlem av et gaming-fellesskap, har vi noe for deg. 
+        </p>
+        <p>
+            Vi forstår også viktigheten av enkelhet og brukervennlighet når det kommer til å finne og kjøpe spill. 
+            Derfor har vi designet vår nettside med tanke på deg. Hos oss kan du enkelt bla gjennom spill, sammenligne priser og få tilgang til de nyeste titlene med bare noen få klikk. 
+        </p>
+        <p class="om-oss-bottom-p-tag">
+            GameHub handler om å bringe gaming til ditt fingertuppene uten å bryte banken. 
+            Vi er stolte av å være din pålitelige destinasjon for nedlastbare spill til konkurransedyktige priser. 
+            Takk for at du valgte oss som din gaming-partner. 
+            Sammen skal vi utforske, konkurrere og skape utrolige gamingopplevelser! 
+        </p>
     </main>
     <footer>
         <nav>
@@ -58,8 +71,8 @@
         </nav>
 
         <form class="abonner-footer">
-            <label for="email">Få de nyeste oppdateringene innen gaming her</label>
-            <input type="email" maxlength="25" placeholder="Epost...">
+            <label for="email-footer">Få de nyeste oppdateringene innen gaming her</label>
+            <input type="email" id="email-footer" maxlength="25" placeholder="Epost..." required>
             <input  class="abonner-button" type="submit" value="Abonner">
         </form>  
         <p>©2023 gamehub.no. Alle rettigheter reservert</p>

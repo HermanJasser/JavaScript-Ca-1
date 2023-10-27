@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Space+Mono&display=swap');
+
+body{
+    background-color: #1C203B;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    color: #BFCFFD;
+    font-family: 'Space Mono', monospace;
+    font-size: 40px;
+    margin-top: 20px;
+    align-self: center;
+}
+
+/*dette er for hover på labelene*/
+.epost-tlf-label:hover , .kort-info-label:hover, .faktura-label:hover{
+    background-color:#BFCFFD;
+    color: #1C203B;
+}
+#epost-checkbox:checked ~ .epost-tlf-label:hover{
+    background-color: #2E3560;
+    color: white;
+}
+
+#kort-info-checkbox:checked ~.kort-info-label:hover{
+    background-color: #2E3560;
+    color: white;
+}
+
+#faktura-checkbox:checked ~.faktura-label:hover{
+    background-color: #2E3560;
+    color: white;
+}
+
+
+
+.epost-tlf-label, .kort-info-label, .faktura-label{
+    background-color: #2E3560;
+    border-radius: 10px;
+    width: 300px;
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    padding: 20px;
+    margin: 20px 20px 0 20px;
+}
+
+ .epost-tlf, .kort-info, .faktura{
+    display: none;
+    width: 300px;
+    height: auto;
+    background-color: #2E3560;
+    margin: 0 20px;
+    border-radius: 0 0 10px 10px;
+    flex-direction: column;
+    padding: 20px;
+
+}
+
+form > #epost-checkbox, #kort-info-checkbox, #faktura-checkbox {
+    display: none;
+}
+
+#epost-checkbox:checked ~ .epost-tlf{
+    display: flex;
+}
+
+
+
+
+#epost-checkbox:checked ~ .epost-tlf-label{
+    border-radius: 10px 10px 0 0;
+    padding: 20px 20px 0 20px;
+}
+
+#kort-info-checkbox:checked ~ .kort-info{
+    display: flex;
+}
+
+#kort-info-checkbox:checked ~ .kort-info-label{
+    border-radius: 10px 10px 0 0;
+    padding: 20px 20px 0 20px;
+}
+
+#faktura-checkbox:checked ~ .faktura{
+ display: flex;
+}
+
+#faktura-checkbox:checked ~ .faktura-label{
+    border-radius: 10px 10px 0 0;
+    padding: 20px 20px 0 20px;
+}
+
+
+div > input{
+width: 280px;
+height: 40px;
+margin: 15px 0;
+border-radius: 10px;
+border: 1px solid black;
+padding: 5px 10px;
+}
+
+.small-input{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    width: 300px;
+    column-gap: 37px;
+}
+
+.small-input > input{
+    width: 110px;
+}
+
+.small-input:nth-child(1){
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+#utløpsdato{
+    grid-column: 1/2;
+    grid-row: 2 / 2;
+}
+
+div > label{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+input::placeholder{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+#gjennomfør{
+    text-align: center;
+    background-color: #BFCFFD;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 20px 0;
+    width: 300px;
+    margin: 20px;
+}
+
+#gjennomfør:hover{
+    background-color: #9FB8FF;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

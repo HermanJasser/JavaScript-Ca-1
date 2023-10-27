@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/kasse.css">
+    <script src="https://kit.fontawesome.com/4c9767c9c5.js" crossorigin="anonymous"></script>
+    <title>Kasse</title>
+</head>
+<body>
+    <h1>Betaling</h1>
+    <form action="./ordrebekreftet.html">
+    <input type="checkbox" id="epost-checkbox" checked>
+    <label class="epost-tlf-label" for="epost-checkbox">Epost og Telefon</label>
+    <div class="epost-tlf">
+        <label for="epost">Epost</label>
+        <input type="email" id="epost" placeholder="Epost" required>
+
+        <label for="telefon-input">Telefon</label>
+        <input type="number" id="telefon-input" placeholder="Telefon" required>
+    </div>
+
+    <input type="checkbox" id="kort-info-checkbox">
+    <label class="kort-info-label" for="kort-info-checkbox">Betal med kredittkort eller debetkort</label>
+    <div class="kort-info">
+        <label for="navn">Navn på kortet</label>
+        <input type="text" id="navn" placeholder="Navn" required>
+
+        <label for="kortnummer">Kortnummer</label>
+        <input type="number" id="kortnummer" placeholder="0000 0000 0000 0000" required>
+        <div class="small-input">
+            <label for="utløpsdato">Utløpsdato</label>
+            <input type="number" id="utløpsdato" placeholder="MM/ÅÅ" required>
+
+            <label for="cvc">CVC</label>
+            <input type="number" id="cvc" placeholder="000" required>
+        </div>
+    </div>
+
+    <input type="checkbox" id="faktura-checkbox">
+    <label class="faktura-label" for="faktura-checkbox">Faktureringsadresse</label>
+    <div class="faktura">
+        <label for="for-etter-navn">For- og etternavn</label>
+        <input type="text" id="for-etter-navn" placeholder="For- og etternavn" required>
+
+        <label for="gate">Gate</label>
+        <input type="text" id="gate" placeholder="Gate" required>
+
+        <label for="postnummer">Postnummer</label>
+        <input type="number" id="postnummer" placeholder="Postnummer" required>
+
+        <label for="sted">Sted</label>
+        <input type="text" id="sted" placeholder="Sted" required>
+    </div>
+    <input id="gjennomfør" type="submit" value="Gjennomfør ordre">
+    
+</form>
+</body>
+</html>

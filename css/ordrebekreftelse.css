@@ -1,0 +1,73 @@
+body{
+    background-color: #BFCFFD;
+    margin: 0;
+}
+
+h1{
+    color: #2E3560;
+    font-family: 'Space Mono', monospace;
+    font-size: 40px;
+    margin: 0;
+}
+
+h2{
+    color: #2E3560;
+    font-family: 'Space Mono', monospace;
+    font-size: 25px;
+    margin: 0;
+}
+
+p{
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: #2E3560;
+    margin: 20px 0 0 0;
+    text-align: center;
+    width: 300px;
+}
+
+header{
+    background-color: #2E3560;
+    margin: 0px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+header > a > img{
+    height: 60px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+i{
+    font-size: 240px;
+    color: #2E3560;
+    margin-top: 40px;
+}
+
+#ferdig{
+    background-color: #2E3560;
+    color: #BFCFFD;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: center;
+    align-self: center;
+    width: 300px;
+    margin: 20px;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#ferdig:hover{
+    background-color: #1C203B;
+}

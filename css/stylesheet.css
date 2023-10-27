@@ -14,7 +14,7 @@ main{
 }
 
 .main-index{
-    padding: 0;
+padding: 0;/**/
 }
 /********************************************
 
@@ -25,13 +25,13 @@ header{
     background-color: #2E3560;
     height: 80px;
 }
+
 header > a >img{
     height: 60px;
     margin-top: 6px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-
 }
 
 .fa-cart-shopping{
@@ -53,7 +53,6 @@ header > a >img{
     margin: 25px 22.5px;
     position: absolute;
     z-index: 99;
-
 }
 
 .ham-div {
@@ -78,11 +77,10 @@ header > a >img{
 #menu-checkbox:checked ~ .ham-div > .ham-div-1{
     animation-name: ham1;
     animation-duration: 500ms;
-    animation-timing-function: all ease;
     transform-origin: left;
     animation-fill-mode: forwards;
-    
 }
+
 
 #menu-checkbox:checked ~ .ham-div > .ham-div-3{
     animation-name: ham3;
@@ -97,9 +95,9 @@ header > a >img{
     transform-origin:  center;
     animation-fill-mode: forwards;
     /*background-color: black;/**/
-    
-
 }
+
+
 @keyframes ham1{
     from {
         transform: rotate(0);
@@ -192,13 +190,11 @@ header > a >img{
 
 #menu-checkbox ~ .drop-down-menu{
     transition: all ease-in-out 500ms;
-
 }
 
 #menu-checkbox:checked ~ .drop-down-menu{
     transition: all ease-in-out 500ms;
-    left:0;
-
+    left: 0;
 }
 
 .abonner-ham-menu > label{
@@ -214,15 +210,14 @@ header > a >img{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    margin-top: 50px;
-    
+    margin-top: 50px; 
 }
 
 .abonner-ham-menu > input{
     background-color: #1C203B;
     color: white;
     height: 40px;
-    width: 350px;
+    width: 300px;
     border-radius: 50px;
     border: none;
     margin-top: 10px;
@@ -273,39 +268,64 @@ h1{
     color: #BFCFFD;
     font-family: 'Space Mono', monospace;
     font-size: 40px;
+    margin: 0;
 }
 
 h2{
     color: #BFCFFD;
     font-family: 'Space Mono', monospace;
     font-size: 25px;
+    margin: 0;
 }
 
 p{
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
+    color: white;
+}
+#salg{
+    color: #FF7A00;
+}
+
+.salg-farge{
+    color: #FF7A00;
 }
 
 .spill-container{
-    height: auto;
+    height: 460px;
     width: 350px;
     background-color: #2E3560;
-    margin: 0px 20px 20px 20px;
-    border-radius: 30px;
+    margin: 0 0 20px 0;
+    border-radius: 10px;
     padding: 30px 20px;
     display: flex;
     flex-direction: column;
 }
 
+.link-spill-container:hover .spill-container > img{
+    height: 353px;
+    margin-bottom: 0px;
+}
+
 .spill-container > img{
-    width: 260px;
+    height: 333px;
     align-self: center;
+    margin-bottom: 20px;
+    transition: ease-in-out 250ms;
 }
 .spill-container > p{
     text-decoration: none;
     color: white;
-    margin-top:40px;
+    margin-top:20px;
     margin-bottom: 0px;
+}
+
+.link-spill-container{
+    text-decoration: none;
+}
+
+#product-desktop-only{
+    display: none;
 }
 
 .pris{
@@ -329,15 +349,15 @@ font-weight: bold;
     background-color: #2E3560;
     height: 280px;
     width: 400px;
-    border-radius: 30px;
+    border-radius: 10px;
     overflow: hidden;/**/
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 20px;    
+    margin: 20px 0 20px 0;    
 }
+
 .hero > img{
     height: 250px;
-    width:  190px;
     transform: rotate(9deg);
     align-self: center;
 }
@@ -362,39 +382,53 @@ font-weight: bold;
     font-size: 18px;
     color: white;
     margin-top: 25px
-
 }
 
 .hero > div > a{
     font-family: 'Roboto', sans-serif;
-    color: black;
+    color: #1C203B;
     text-decoration: none;
     background-color: #BFCFFD;
     padding:  10px 18px;
-    border-radius: 12px;
+    border-radius: 10px;
     text-align: center;
     font-size: 15px;
     margin: 35px 0;
+    font-weight: 600;
+}
+
+.hero > div > a:hover{
+    background-color: #9FB8FF;
 }
 
 /*Dette er for spill*/
 
+.spill-informasjon{
+    width: 85%;
+    max-width: 900px;
+
+}
+
 .main-spill{
     padding-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 .spill-des{
     color: white;
 }
 
-.main-spill > h1{
+.spill-informasjon > h1{
     margin: 0px;
-}
+}/**/
 
-.main-spill > p{
+.spill-informasjon > p{
     margin: 20px 0 20px 0;
 }
 
-.main-spill > div{
+.alle-spill-container{
     width: auto;
     display: flex;
     flex-direction: column;
@@ -402,17 +436,193 @@ font-weight: bold;
 }
 
 
-/*Dette er for kontakt oss*/
 /*Dette er for om oss*/
+.main-om-oss{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-om-oss > img{
+width: 100%;
+max-width: 700px;
+margin: 0;
+}
+
+.main-om-oss > h1 {
+   margin: 20px 0 0 0;
+   font-size: 35px;
+}
+
+.main-om-oss > p{
+    width: 100%;
+    margin: 20px 0 0 0;
+}
+
+.om-oss-bottom-p-tag{
+    padding-bottom: 20px;
+}
+/*Dette er for kontakt oss*/
+
+.main-kontakt-oss > div{
+    background-color: #2E3560;
+    padding: 20px;
+    border-radius: 10px;
+    display: grid;
+    gap: 20px;
+}
+.main-kontakt-oss > div > p{
+    margin: 0;
+    font-size: 23px;
+}
+
+
+
 /*Dette er for handlekurv*/
-/*Dette er for checkout*/
-/*Dette er for*/
+.main-handlekurv{
+    display: flex;
+    flex-direction: column;
+
+}
+.main-handlekurv > a > div > img{
+height: 100px;
+}
+
+.main-handlekurv > a{
+    text-decoration: none;
+}
+
+.main-handlekurv > a > div{
+    display: flex;
+    flex-direction: row;
+    border-top: #2E3560 solid 3px;
+    border-bottom: #2E3560 solid 3px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    height: 120px;
+    margin: 20px;
+
+}
+
+.main-handlekurv > a > div > p {
+    font-size: 16px;
+}
+
+
+
+.kasse-button {
+    color: #1C203B;
+    background-color: #BFCFFD;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    align-self: center;
+    width: 300px;
+    margin: 20px;
+    font-weight: 600;
+}
+
+.kasse-button:hover{
+    background-color: #9FB8FF;
+    /*width: 310px;/**/
+}
+
+.main-handlekurv > p{
+align-self: flex-end;
+margin: 20px 20px 20px 20px;
+font-weight: bold;
+}
+
+
+/********
+Dette er for spill side
+********/
+
+.produkt-beskrivelse{
+    background-color: #2E3560;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.produkt-beskrivelse > ul{
+    color: white;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.spillside-left, .spillside-right{
+    display: flex;
+    flex-direction: column;
+}
+
+.spillside-left > img{
+width: 260px;
+align-self: center;
+margin-top: 20px;
+}
+
+.pris-div{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    padding: 10px;
+    margin: 10px 0 10px 0;
+}
+
+.orginal-pris{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin: 0px;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.nå-pris{
+    grid-column: 1/2;
+    grid-row: 2/2;
+    margin: 0;
+    
+    font-size: 23px;
+}
+
+.salg{
+    grid-column: 2/2;
+    grid-row: 2/2;
+    margin: 0;
+    text-align: end;
+    font-size: 23px;
+}
+
+.spillside-right > a {
+    background-color: #BFCFFD;
+    color: #1C203B;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: center;
+    align-self: center;
+    width: 300px;
+    margin: 0 20px;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.spillside-right > a:hover{
+    background-color: #9FB8FF;
+}
 
 /********************************************
 
                     footer
 
 *********************************************/
+
 footer{
     background-color: #2E3560;
     height: 160px;
@@ -455,14 +665,14 @@ footer > nav > a:hover {
 .abonner-footer > label{
     color: white;
     font-family: 'Roboto', sans-serif;
-    font-size: 15px;
+    font-size: 12px;
 }
 
 .abonner-footer > input{
     background-color: #1C203B;
     color: white;
     height: 40px;
-    width: 300px;
+    width: 250px;
     border-radius: 50px;
     border: none;
     padding-left: 10px;
@@ -521,3 +731,311 @@ text-align: center;
 
 *********************************************/
 
+@media screen and (min-width:576px){
+    /*body{
+        background-color: white;
+    }/**/
+
+    h1{
+        font-size: 45px;
+    }
+    
+    h2{
+        font-size: 30px;
+    }
+
+    /*******
+    Spillcontainere
+    *******/
+
+    .spill-container{
+        transform: scale(0.666);
+        margin: -51px;
+        position: relative;
+        left: -13px;
+    }
+    .populære-spill{
+        display: grid;
+        grid-template-columns: auto auto;
+        width: 550px;
+    }
+
+    /*******
+    index side
+    *******/
+
+    .main-index > h2{
+        margin-bottom: 0px;
+    }
+
+    .hero{
+        height: 350px;
+        width: 550px;
+    }
+    
+    .hero > img{
+        height: 330px;
+    }
+    
+    .hero > div > h2{
+        font-size: 27px;
+        margin-top: 42px;
+    }
+    
+    
+    .hero > div > p{
+        font-size: 21px;
+        margin-top: 42px
+    }
+    
+    .hero > div > a{
+        padding:  15px 22px;
+        font-size: 20px;
+        margin: 30px 0;
+    }
+    /*******
+    index side
+    *******/
+
+.alle-spill-container{
+        display: grid;
+        grid-template-columns: auto auto;
+        width: 550px;
+        margin-top: 10px;
+    }
+
+    .main-spill .spill-container{
+        margin-top: -87px ;
+    }
+
+    .main-spill{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-spill > h1{
+        align-self: flex-start;
+
+    }
+
+    .spill-des{
+        align-self: flex-start;
+    }
+
+    /*********  
+    om oss og kontakt oss og spillside og handlekurv
+    *********/
+    .main-kontakt-oss, .main-om-oss, .main-spillside, .main-handlekurv{
+        padding: 20px 50px;
+    }
+
+    .kasse-button {
+        align-self: flex-end;
+        width: 200px;
+    }
+}
+
+@media screen and (min-width:768px){
+    /*body{
+        background-color: black;
+    }/**/
+    
+    main{
+        margin: 20px 70px;
+    }
+
+    /********
+    dette er for header
+    ********/
+    header{
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    header > a >img{
+        height: 60px;
+        margin: 0 20px;
+        position: static;
+        transform: translateX(0);
+    }
+
+    .fa-cart-shopping{
+        font-size: 50px;
+        margin: 0 20px ;
+        position: static;
+        right: 0;
+    }
+    
+    
+    .checkbox-label, .ham-div {
+        display: none;
+    
+    }
+    
+ 
+    /*Dette er for hamburger menyen*/
+    .drop-down-menu > a{
+        text-align: center;
+        width: 90px;
+        display: flex;
+        flex-direction: column;
+        background: none;
+        border-radius: 10px;
+        border-bottom: none;
+        font-size: 17px;
+    }
+    
+
+    
+    .fa-chevron-right{
+       display: none;
+       opacity: 0;
+       z-index: -1;
+    }
+    
+    .home-link{
+        border-top: none;
+    }
+    
+    .drop-down-menu{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background: none;
+        position: static;
+        height: 120px;
+        width: 70%;
+    }
+    
+    #menu-checkbox{
+        display: none;
+    }/**/
+    
+    #menu-checkbox ~ .drop-down-menu{
+        transition: all ease-in-out 500ms;
+    }
+    
+    #menu-checkbox:checked ~ .drop-down-menu{
+        transition: all ease-in-out 500ms;
+        left: 0;
+    }
+    
+    .abonner-ham-menu > label{
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+    }
+    
+    .abonner-ham-menu{
+        display: none; 
+    }
+    
+    
+    /********
+    Dette er for index main
+    ********/
+
+    .hero{
+        height: 400px;
+        width: 85%;
+        max-width: 1250px ;
+    }
+    
+    .hero > img{
+        height: 380px;
+        justify-self:center
+    }
+    
+    .hero > div > h2{
+        font-size: 27px;
+        margin-top: 42px;
+    }
+    
+    
+    .hero > div > p{
+        font-size: 21px;
+        margin-top: 42px
+    }
+    
+    .hero > div > a{
+        padding:  15px 22px;
+        font-size: 20px;
+        margin: 30px 0;
+    }
+
+
+
+    .main-index > .spill-container{
+        transform: scale(1);
+        margin: 20px;
+        position: static;
+        left:0;
+    }
+    .populære-spill{
+        display: flex;
+        flex-direction: row;
+        overflow-x: scroll;
+        width: 85%;
+        max-width: 838px;
+    }
+    #product-desktop-only{
+        display: block;
+    }
+
+
+/********
+Dette er for spill siden
+********/
+
+
+}
+
+@media screen and (min-width:990px){
+
+    .alle-spill-container{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        width: auto;
+        margin-top: 10px;
+    }
+    .main-spillside{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    
+    .spillside-left, .spillside-right{
+        justify-self: center;
+    }
+    
+    .spillside-left{
+        margin-right: 60px;
+    }
+    
+    .spillside-right{
+        max-width: 500px;
+    }
+    .spillside-left > h2{
+      position: absolute;
+    }
+    
+    .spillside-left > img{
+    width: 300px;
+    align-self: center;
+    position: relative;
+    top: 100px;
+    }
+}
+
+@media screen and (min-width:1100px){
+   
+
+    .drop-down-menu > a{
+        width: 120px;
+        font-size: 22px;
+    }
+
+    
+}
