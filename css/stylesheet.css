@@ -369,7 +369,7 @@ font-weight: bold;
     align-items: center;
 }
 
-.hero > div > h2{
+.hero > div > h1{
     font-family: 'Space Mono', monospace;
     color: white;
     font-size: 21px;
@@ -615,6 +615,10 @@ margin-top: 20px;
 
 .spillside-right > a:hover{
     background-color: #9FB8FF;
+}
+
+.main-spillside h1{
+    font-size: 31px;
 }
 
 /********************************************
