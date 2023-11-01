@@ -3,8 +3,23 @@
 body{
     background-color: #1C203B;
     margin: 0;
+}
+main{
     display: flex;
     flex-direction: column;
+}
+header{
+    background-color: #2E3560;
+    margin: 0px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+header > a > img{
+    height: 60px;
 }
 
 form{

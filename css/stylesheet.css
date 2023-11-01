@@ -630,6 +630,10 @@ margin-top: 20px;
 footer{
     background-color: #2E3560;
     height: 160px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
 }
 
 footer > nav{
@@ -640,6 +644,10 @@ height: 110px;
 justify-content: center;
 margin:25px 0 0 20px;
 width: 100px;
+}
+
+.footer-left{
+    margin-top: 25px;
 }
 
 footer > nav > a{
@@ -657,13 +665,8 @@ footer > nav > a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
-    bottom: 100px;
-    /*background-color: black;/**/
     width: 320px;
-    left: 100%;
-    padding-right: 25px;
-    transform: translateX(-100%);
+   
 }
 
 .abonner-footer > label{
@@ -714,19 +717,15 @@ footer > nav > a:hover {
     color:#1C203B;
 }
 
-footer > p {
+.footer-left >  p {
 color: white;
 font-family: 'Roboto', sans-serif;
 font-size: 12px;
 opacity: 50%;
-position: relative;
-left:100%;
 padding-right: 20px;
-transform: translateX(-100%);
-bottom: 135px;
-
 width: 320px;
 text-align: center;
+margin: 0;
 }
 
 /********************************************
