@@ -44,7 +44,7 @@ header > a >img{
 
 .fa-cart-shopping:hover {
     color: #9FB8FF;
-    /*margin-top: 21px;/**/
+
 }
 
 .checkbox-label {
@@ -53,6 +53,7 @@ header > a >img{
     margin: 25px 22.5px;
     position: absolute;
     z-index: 99;
+    cursor: pointer;
 }
 
 .ham-div {
@@ -160,7 +161,7 @@ header > a >img{
 }
 
 .drop-down-menu > a:hover{
-    /*text-decoration: underline;/**/
+    
     background-color: #1C203B;
 }
 
@@ -527,7 +528,6 @@ height: 100px;
 
 .kasse-button:hover{
     background-color: #9FB8FF;
-    /*width: 310px;/**/
 }
 
 .main-handlekurv > p{
@@ -735,9 +735,7 @@ margin: 0;
 *********************************************/
 
 @media screen and (min-width:576px){
-    /*body{
-        background-color: white;
-    }/**/
+    
 
     h1{
         font-size: 45px;
@@ -840,9 +838,7 @@ margin: 0;
 }
 
 @media screen and (min-width:768px){
-    /*body{
-        background-color: black;
-    }/**/
+   
     
     main{
         margin: 20px 70px;
