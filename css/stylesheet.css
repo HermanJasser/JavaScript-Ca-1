@@ -541,6 +541,17 @@ font-weight: bold;
 Dette er for spill side
 ********/
 
+.tilbake-knapp{
+    color: white;
+    position: absolute;
+    top: 100px;
+    right: 20px;
+}
+
+#velg-sortering{
+    margin-bottom: 20px;
+}
+
 .produkt-beskrivelse{
     background-color: #2E3560;
     border-radius: 10px;
@@ -835,6 +846,9 @@ margin: 0;
         align-self: flex-end;
         width: 200px;
     }
+    .tilbake-knapp{
+        right: 50px;
+    }
 }
 
 @media screen and (min-width:768px){
@@ -842,6 +856,11 @@ margin: 0;
     
     main{
         margin: 20px 70px;
+    }
+
+    .tilbake-knapp{
+        top: 150px;
+        right: 70px;
     }
 
     /********

@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/stylesheet.css">
     <script src="https://kit.fontawesome.com/4c9767c9c5.js" crossorigin="anonymous"></script>
-    <script src="./js/script.js" defer></script>
+    <script src="./js/spill.js" type="module"></script>
     <title>produkter</title>
 </head>
 <body>
@@ -43,6 +43,11 @@
         
         <a href="handlekurv.html"><i class="fa-solid fa-cart-shopping"></i></a>
     </header>
+
+
+
+
+
     <main class="main-spill">
         <div class="spill-informasjon">
         <h1>Spill</h1>
@@ -51,12 +56,23 @@
             Du vil få en nedlastning link med engang du bekrefter ordren din. 
             Da er det bare å laste ned spillet, få med noen venner og kose seg</p>
         </div>
-     
+
+        <select id="velg-sortering">
+            <option value="none" selected>Sorter</opt>
+            <option value="hoyLav">Pris høy-lav</opt>
+            <option value="lavHoy">Pris lav-høy</opt>
+            <option value="release">Release</opt>
+        </select>
+
         <div class="alle-spill-container">
             <h2>Loading...</h2>
 
         </div>
     </main>
+
+
+
+
     <footer>
         <nav>
             <a href="./index.html">Hjem</a>
