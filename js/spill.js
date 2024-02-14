@@ -65,12 +65,9 @@ velgSortering.addEventListener("change", sorterSpill);
             let releaseApi = usortertApi.toSorted((a, b) => b.released - a.released);
             //console.log(valgtSortering);
             listProductCards(releaseApi, alleSpillContainer);
+        } else if (valgtSortering === "none"){
+            listSpill(alleSpillContainer);
         }
-
-
-
-
-
     } catch (error){
         console.error("Error message: " + error)
         alleSpillContainer.innerHTML = `<p>Kan ikke finne noen spill</p>`

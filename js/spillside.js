@@ -1,3 +1,5 @@
+import {listHandlekurv} from "./utils.js";
+
 let mainSpillSide = document.querySelector("main.main-spillside");
 let spillApiById =[];
 
@@ -36,7 +38,7 @@ function lagSpillSide(api, output){
         <div class="pris-div">
             <p class="nå-pris">${api.price} $</p>
         </div>
-        <a href="./handlekurv.html">Legg til i handlekurv</a>
+        <a class="legg-i-handlekurv" id=${api.id} href="#">Legg til i handlekurv</a>
         <section class="produkt-beskrivelse">
             <h2>Produkt beskrivelse</h2>
             <p>${api.description}</p>
@@ -51,3 +53,7 @@ function lagSpillSide(api, output){
 
     output.innerHTML = spillSideInput;
 }
+
+
+    
+

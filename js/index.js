@@ -67,3 +67,4 @@ function lagHero(api){
     hero.innerHTML = heroInput;
 }
 
+
