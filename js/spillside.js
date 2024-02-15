@@ -38,7 +38,7 @@ function lagSpillSide(api, output) {
       <div class="pris-div">
           <p class="nå-pris">${api.price} $</p>
       </div>
-      <a class="legg-i-handlekurv" id=${api.id} href="#">Legg til i handlekurv</a>
+      <a class="legg-i-handlekurv" id=${api.id} href="./handlekurv.html">Legg til i handlekurv</a>
       <section class="produkt-beskrivelse">
           <h2>Produkt beskrivelse</h2>
           <p>${api.description}</p>
@@ -55,8 +55,7 @@ function lagSpillSide(api, output) {
 function addEventListener(id) {
   const handleKurvKnapp = document.querySelector(".legg-i-handlekurv");
   handleKurvKnapp.addEventListener("click", (e) => {
-    e.preventDefault();
+    //e.preventDefault();
     listHandlekurv(id);
   });
 }
-

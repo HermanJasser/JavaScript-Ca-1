@@ -485,15 +485,15 @@ margin: 0;
     flex-direction: column;
 
 }
-.main-handlekurv > a > div > img{
+.handlekurv-container > a > div > img{
 height: 100px;
 }
 
-.main-handlekurv > a{
+.handlekurv-container > a{
     text-decoration: none;
 }
 
-.main-handlekurv > a > div{
+.handlekurv-container > a > div{
     display: flex;
     flex-direction: row;
     border-top: #2E3560 solid 3px;
@@ -502,11 +502,11 @@ height: 100px;
     justify-content: space-between;
     padding: 10px;
     height: 120px;
-    margin: 20px;
+    margin: -3px 20px;
 
 }
 
-.main-handlekurv > a > div > p {
+.handlekurv-container > a > div > p {
     font-size: 16px;
 }
 

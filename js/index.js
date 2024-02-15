@@ -12,7 +12,6 @@ async function listFavoriteSpill(container) {
         const api = `https://v2.api.noroff.dev/gamehub`;
         const response = await fetch(api);
         //console.log(response);
-        //Denne eroor meldingen funker ikke
         if (!response.ok) throw new Error(`HTTP error! ${response.status}`);
         const data = await response.json();
         gamehubApi = data.data;
