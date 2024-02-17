@@ -57,5 +57,6 @@ function addEventListener(id) {
   handleKurvKnapp.addEventListener("click", (e) => {
     //e.preventDefault();
     listHandlekurv(id);
+    
   });
 }

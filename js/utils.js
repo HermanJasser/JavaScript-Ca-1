@@ -30,14 +30,16 @@ export function listProductCards(api, output) {
     if (handlekurv.includes(id)) {
       added = true;
     }
-    console.log("kjører");
-    console.log(handlekurv.includes(id));
-    if (added) {
+    //console.log("kjører");
+    //console.log(handlekurv.includes(id));
+    if (added === true) {
       handlekurv = handlekurv.filter((item) => item !== id);
     } else {
       handlekurv.push(id);
+      
+
     }
     localStorage.setItem("handlekurven", JSON.stringify(handlekurv));
-    console.log(handlekurv);
+    //console.log(handlekurv);
   }
   ﻿
