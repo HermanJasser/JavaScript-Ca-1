@@ -1,4 +1,4 @@
-import { handlekurv } from "./utils.js";
+import { handlekurv, finnPris } from "./utils.js";
 
 let handlekurvContainer = document.querySelector(".handlekurv-container");
 let prisHandlekurv = document.querySelector(".pris-handlekurv");
@@ -37,8 +37,9 @@ async function getGameInfoWithHandleKurvId() {
     //console.log(Filtered);
 
     listHandlekurvOnSite(filtered);
-    finnPris(filtered);
-    console.log(filtered);
+    finnPris(filtered, prisHandlekurv);
+    //console.log(filtered);
+
   } catch (error) {
     console.error("Error message: " + error);
     handlekurvContainer.innerHTML = `<p>Kan ikke finne handlekurven</p>`;
@@ -46,6 +47,8 @@ async function getGameInfoWithHandleKurvId() {
 }
 getGameInfoWithHandleKurvId();
 //console.log(handlekurv);
+console.log(filtered);
+
 
 function oppdaterHandlekurv(id) {
   let oppdatertHandlekurv = localStorage.getItem("handlekurven");
@@ -54,6 +57,8 @@ function oppdaterHandlekurv(id) {
   return oppdatertHandlekurv;
   //console.log(oppdatertHandlekurv);
 }
+
+//console.log(localStorage.getItem("handlekurven"));
 
 function addEventListenerHandlekurv(id) {
   let fjern = document.getElementById(id);
@@ -65,22 +70,7 @@ function addEventListenerHandlekurv(id) {
 }
 
 
-function finnPris(arr) {
-    let prisContainer = 0;
-    for (let array of arr) {
-        prisContainer += array.price;
-    }
 
-    if (prisContainer == 0){
-        prisContainer = "Handlekurven er tom";
-    } else {
-        prisContainer = `Total pris: ${prisContainer} $`
-    }
-
-        prisHandlekurv.innerHTML = prisContainer;
-    
-
-}
 
 
 

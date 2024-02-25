@@ -36,10 +36,56 @@ export function listProductCards(api, output) {
       handlekurv = handlekurv.filter((item) => item !== id);
     } else {
       handlekurv.push(id);
-      
 
     }
     localStorage.setItem("handlekurven", JSON.stringify(handlekurv));
     //console.log(handlekurv);
   }
-  ﻿
+
+  export function finnPris(arr, container) {
+    let prisContainer = 0;
+    for (let array of arr) {
+        prisContainer += array.price;
+    }
+
+    if (prisContainer == 0){
+        prisContainer = "Handlekurven er tom";
+    } else {
+        prisContainer = `Total pris: ${prisContainer} $`
+    }
+
+        container.innerHTML = prisContainer; 
+}
+
+let gamehubData = [];
+
+export async function getFiltered(containerProduct, containerPris) {
+  try {
+    const api = `https://v2.api.noroff.dev/gamehub`;
+    const response = await fetch(api);
+    if (!response.ok) throw new Error(`HTTP error! ${response.status}`);
+    const data = await response.json();
+    gamehubData = data.data;
+
+    const filtered = gamehubData.filter((obj) => {
+      return handlekurv.includes(obj.id);
+    });
+    //console.log(filtered);
+    listSummary(filtered, containerProduct);
+    finnPris(filtered, containerPris)
+
+  } catch (error) {
+    console.error("Error message: " + error);
+    //handlekurvContainer.innerHTML = `<p>Kan ikke finne handlekurven</p>`;
+  }
+}
+
+
+function listSummary(array, container){
+  let output = "";
+  for(let arr of array){
+      output += `<li>${arr.title} ${arr.price}</li>`;
+  }
+
+  container.innerHTML = output;
+}
