@@ -2,6 +2,19 @@ import { handlekurv, finnPris } from "./utils.js";
 
 let handlekurvContainer = document.querySelector(".handlekurv-container");
 let prisHandlekurv = document.querySelector(".pris-handlekurv");
+let kasseBtn = document.querySelector(".kasse-button");
+
+
+
+//console.log(handlekurv.length);
+
+function sjekkOmHandlekurvErTom(){
+if(handlekurv.length == 0)
+  kasseBtn.style.display = "none";
+}
+
+sjekkOmHandlekurvErTom();
+
 
 function listHandlekurvOnSite(gameById) {
   handlekurvContainer.innerHTML = "";
@@ -20,6 +33,8 @@ function listHandlekurvOnSite(gameById) {
     addEventListenerHandlekurv(item.id);
   });
 }
+
+
 
 let gamehubData = [];
 async function getGameInfoWithHandleKurvId() {
