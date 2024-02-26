@@ -2,7 +2,7 @@ import { listHandlekurv, handlekurv } from "./utils.js";
 
 let mainSpillSide = document.querySelector("main.main-spillside");
 let spillApiById = [];
-console.log(handlekurv);
+//console.log(handlekurv);
 
 //console.log(mainSpillside);
 

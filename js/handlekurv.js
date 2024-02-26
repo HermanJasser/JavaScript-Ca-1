@@ -62,7 +62,7 @@ async function getGameInfoWithHandleKurvId() {
 }
 getGameInfoWithHandleKurvId();
 //console.log(handlekurv);
-console.log(filtered);
+//console.log(filtered);
 
 
 function oppdaterHandlekurv(id) {
