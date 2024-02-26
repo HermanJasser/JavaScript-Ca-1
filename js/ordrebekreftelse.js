@@ -6,13 +6,13 @@ let logoHomeBtn = document.getElementById("logo-home-btn")
 //console.log(ferdigBtn);
 
 getFiltered(ordreSummaryBekreftelse, ordreBekreftelsePris);
+localStorage.clear();
 
 
-
-ferdigBtn.addEventListener("click", tomHandlekurv);
+/*ferdigBtn.addEventListener("click", tomHandlekurv);
 
 logoHomeBtn.addEventListener("click", tomHandlekurv);
 
 function tomHandlekurv(){
     localStorage.clear();
-}
+}*/
