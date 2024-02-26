@@ -11,10 +11,6 @@ export function listProductCards(api, output) {
     output.innerHTML = spillContainer;
   }
   
-  /*************
-   handlekurvkode:(
-   *************/
-  
   export let handlekurv;
   
   export const lagringHandlekurv = localStorage.getItem("handlekurven");

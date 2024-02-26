@@ -58,7 +58,7 @@ showHero(hero);
 function lagHero(api){
     let heroInput =`<img src="${api.image.url}" alt="${api.image.alt}">
     <div>
-        <h1>Spar <span class="salg-farge">30%</span> på <br>ukens spill</h1>
+        <h1>Sjekk ut <br>ukensspill</h1>
         <p>${api.title}</p>
         <a href="./spillside.html?id=${api.id}">LES MER</a>
     </div>`;
